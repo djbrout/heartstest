@@ -718,16 +718,11 @@ $(document).ready(function() {
                 $card.addClass(opponent.dir);
             }
             $("#played-cards .card").removeClass("callcard")
+            $("#played-cards .card").removeClass("hover")
             $("#played-cards").append($card);
             $card.addClass("callcard");
+            $card.removeClass("hover");
         }
-
-        
-        // _.each($(".playing-cards .callcard .card.move"), function(card, i) {
-        //     _.delay(function() {
-        //         $(card).removeClass("move");
-        //     }, i * 100);
-        // });
 
         //Hovering over the cards should pop them up
         $("#played-cards .card").hover(
