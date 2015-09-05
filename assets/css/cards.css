@@ -34,10 +34,6 @@
     height: 400px;
     transform: translateX(9em) translateY(9em) rotate(0deg);
 }
-.playing-cards .callcard .card {
-    margin-right: 0em;
-    margin-left: 0em;
-}
 /*
  * Played are the middle cards
  */

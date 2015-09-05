@@ -717,14 +717,14 @@ $(document).ready(function() {
             } else {
                 $card.addClass(opponent.dir);
             }
-            $("#played-cards .card").removeClass("callable")
+            $("#played-cards .card").removeClass("callcard")
             $("#played-cards").append($card);
-            $card.addClass("callable");
+            $card.addClass("callcard");
         }
 
-        _.each($(".playing-cards .table .card .callable"), function(card, i) {
+        _.each($(".playing-cards .callcard"), function(card, i) {
             _.delay(function() {
-                $(card).removeClass("callable");
+                $(card).removeClass("callcard");
             }, i * 100);
         });
 
