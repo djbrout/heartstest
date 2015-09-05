@@ -44,23 +44,23 @@
     -webkit-animation-timing-function: ease-in-out;
 }
 .playing-cards .played .card.left {
-    position: absolute;
-    transform: translateX(0.0em);/* translateY(1.65em) rotate(0deg);*/
+    /*position: absolute;
+    transform: translateX(0.0em); translateY(1.65em) rotate(0deg);
     -webkit-transform: translateX(0.0em);/* translateY(1.65em) rotate(0deg);*/
 }
 .playing-cards .played .card.top {
-    position: absolute;
+    /*position: absolute;
     transform: translateX(2.5em);
-    -webkit-transform: translateX(2.5em);
+    -webkit-transform: translateX(2.5em);*/
 }
 .playing-cards .played .card.bottom {
-    position: absolute;
-    transform: translateX(5em);/* translateY(3.65em) rotate(0deg);*/
+    /*position: absolute;
+    transform: translateX(5em);/* translateY(3.65em) rotate(0deg);
     -webkit-transform: translateX(5em);/* translateY(3.65em) rotate(0deg);*/
 }
 .playing-cards .played .card.right {
-    position: absolute;
-    transform: translateX(7.5em);/* translateY(1.65em) rotate(0deg);*/
+    /*position: absolute;
+    transform: translateX(7.5em);/* translateY(1.65em) rotate(0deg);
     -webkit-transform: translateX(7.5em);/* translateY(1.65em) rotate(0deg);*/
 }
 /**
