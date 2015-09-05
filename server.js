@@ -227,9 +227,9 @@ primus.on("connection", function(client) {
 
 
     function startPlaying(table) {
-		console.log("Hi");
         if (table.readyToTrade()) {
 			var trade_map;
+			throw 43;
 			for (var k = 1; k <= 6; ++k){
 				for (var pos in table.traded_cards) {
 					var cards = table.traded_cards[pos];
