@@ -719,7 +719,10 @@ $(document).ready(function() {
             }
             $("#played-cards .card").removeClass("callable")
             $("#played-cards").append($card);
-            $card.addClass("callable");
+            //$card.addClass("callable");
+
+            //if (card.hasClass("callable"))
+            //#console.log("HEREH AYAYAYAYAYAYAYAYAYAY");
         }
 
         //Hovering over the cards should pop them up
