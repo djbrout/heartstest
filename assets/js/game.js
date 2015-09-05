@@ -629,13 +629,13 @@ $(document).ready(function() {
             showCards(new_hand, !IS_IPAD);
 
             //Select the person to go first
-            var two_of_clubs = {
+            /*var two_of_clubs = {
                 suit: "C",
                 rank: 2
             };
             if (_turn == _name) {
                 socket.send("playCard", two_of_clubs);
-            }
+				}*/
         }
     }
 
