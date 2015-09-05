@@ -299,28 +299,28 @@ primus.on("connection", function(client) {
                     //If this is the first card, set the suit
                     if (_und.size(table.played_cards) === 0) {
                         //Checks to see if we only have hearts left
-                        if (card.suit == "H") {
-                            var have_other_suits = player.hasSuit("S") || player.hasSuit("C") || player.hasSuit("D");
-                            //Can't start with a heart if they aren't broken yet,
-                            //but can if the player only has hearts left
-                            if (table.hearts_broken === false && have_other_suits === true) {
-                                console.log(player.name + " tried to play H, not broken yet: " + JSON.stringify(card));
-                                return;
-                            }
-                        }
+                        // if (card.suit == "H") {
+                        //     var have_other_suits = player.hasSuit("S") || player.hasSuit("C") || player.hasSuit("D");
+                        //     //Can't start with a heart if they aren't broken yet,
+                        //     //but can if the player only has hearts left
+                        //     if (table.hearts_broken === false && have_other_suits === true) {
+                        //         console.log(player.name + " tried to play H, not broken yet: " + JSON.stringify(card));
+                        //         return;
+                        //     }
+                        // }
                         //Once the first card is played, the table is now in the 'playing' state
                         table.state = "playing";
                         //This is the first card, set the trick suit
-                        table.trick_suit = card.suit;
+                        table.trick_suit = "A";
                     }
                     //Check if this card is allowed to be played (outliers taken care of above)
                     var isValidSuit = true;
                     if (isValidSuit === true) {
                         console.log(player.name + " played card " + JSON.stringify(card));
-                        if (card.suit == "H" && table.hearts_broken === false) {
-                            table.hearts_broken = true;
-                            primus.room(table.id).send("heartsBroken");
-                        }
+                        //if (card.suit == "H" && table.hearts_broken === false) {
+                        //    table.hearts_broken = true;
+                        //    primus.room(table.id).send("heartsBroken");
+                        //}
                         if (_und.size(table.played_cards) < 4) {
                             primus.room(table.id).send("cardPlayed", player.name, card,
                                 table.trick_suit);
