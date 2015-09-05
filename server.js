@@ -238,7 +238,7 @@ primus.on("connection", function(client) {
 					player.removeCards(cards);
 
 
-				
+					console.log(k);
 					switch (k) {
 					case 1 || 6:
 						//right
