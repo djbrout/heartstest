@@ -518,6 +518,21 @@ $(document).ready(function() {
             }
         );
 
+        //Hovering over the cards should pop them up
+        $(".playing_cards .card").hover(
+            function() {
+                //In handler
+                if (!$(this).hasClass("disabled") && !$(this).hasClass("flipped") && !IS_IPAD) {
+                    $(".playing_cards .card").removeClass("hover");
+                    $(this).addClass("hover");
+                }
+            },
+            function() {
+                //Out handler
+                $(".playing_cards .card").removeClass("hover");
+            }
+        );
+
         $("#player-hand .card").click(function() {
             if (_state == "trading") {
                 var $traded_cards = $("#traded-cards");
