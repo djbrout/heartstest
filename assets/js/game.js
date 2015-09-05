@@ -422,16 +422,27 @@ $(document).ready(function() {
             name_div.text(name);
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
+            if (pos == 'N') {
+                name_div.append('<div class = "score-label"> Pick Up Card </div>');
+            }
 
-            //name_div.append('<div class = "score-label"></div>');
-            _players[name] = {
-                dir: rel_dir,
-                pos: pos,
-                id: player.id,
-                //score_div: name_div.find(".score-label"),
-                color: color_map[pos]
-            };
-
+            if (pos == 'N') {
+                _players[name] = {
+                    dir: rel_dir,
+                    pos: pos,
+                    id: player.id,
+                    score_div: name_div.find(".score-label"),
+                    color: color_map[pos]
+                };
+            } 
+            else {
+                _players[name] = {
+                    dir: rel_dir,
+                    pos: pos,
+                    id: player.id,
+                    color: color_map[pos]
+                };
+            }  
             //Update the score table's title
             var score_index = score_order.indexOf(pos);
             $score_table_head[score_index].innerText = name;
