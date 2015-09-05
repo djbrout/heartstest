@@ -227,6 +227,7 @@ primus.on("connection", function(client) {
 
 
     function startPlaying(table) {
+		console.log("Hi");
         if (table.readyToTrade()) {
 			var trade_map;
 			console.log("Hello AJ");
