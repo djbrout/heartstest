@@ -728,7 +728,7 @@ $(document).ready(function() {
         $("#played-cards .card").hover(
             function() {
                 //In handler
-                if (!$(this).hasClass("flipped") && !IS_IPAD) {
+                if (!$(this).hasClass("flipped") && !IS_IPAD && !$(this.hasClass("callcard"))) {
                     $("#played-cards .card").removeClass("hover");
                     $(this).addClass("hover");
                 }
