@@ -230,7 +230,7 @@ primus.on("connection", function(client) {
         //setInfoText("REACHED HERE", color_grey);
         if (table.readyToTrade()) {
 			var trade_map;
-			for (var k = 1; k <= 6; ++k){
+			for (var k = 1; k <= 1; ++k){
 				for (var pos in table.traded_cards) {
 					var cards = table.traded_cards[pos];
 
@@ -249,7 +249,7 @@ primus.on("connection", function(client) {
 								"E": "N",
 								"W": "S"
 								};
-					case 3 || 5:
+					case 2 || 5:
 						//across
 						trade_map = {
 							"N": "S",
@@ -257,7 +257,7 @@ primus.on("connection", function(client) {
 								"E": "W",
 								"W": "E"
 								};
-					case 2 || 4:
+					case 3 || 4:
 						//left
 						trade_map = {
 							"N": "E",
