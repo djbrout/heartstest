@@ -130,13 +130,13 @@ a {
 }
 .score-label {
     position: relative;
-    top: .5px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
     display: inline-block;
     padding: 6.5px 12px;
     background: rgba(0, 0, 0, 0.15);
     border-left: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 #sidr-right {
     width:500px;
