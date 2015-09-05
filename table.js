@@ -123,7 +123,7 @@ var Table = function() {
 
     function tradeMap() {
         switch (this.round) {
-            case 2 || 6:
+            case 1 || 6:
                 //right
                 return {
                     "N": "W",
@@ -131,7 +131,7 @@ var Table = function() {
                     "E": "N",
                     "W": "S"
                 };
-            case 1 || 5:
+            case 2 || 5:
                 //across
                 return {
                     "N": "S",

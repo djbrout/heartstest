@@ -248,7 +248,7 @@ primus.on("connection", function(client) {
 								"E": "N",
 								"W": "S"
 								};
-					case 2 || 5:
+					case 3 || 5:
 						//across
 						trade_map = {
 							"N": "S",
@@ -256,7 +256,7 @@ primus.on("connection", function(client) {
 								"E": "W",
 								"W": "E"
 								};
-					case 3 || 4:
+					case 2 || 4:
 						//left
 						trade_map = {
 							"N": "E",
