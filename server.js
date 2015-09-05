@@ -228,19 +228,20 @@ primus.on("connection", function(client) {
 
     function startPlaying(table) {
         if (table.readyToTrade()) {
-            for (var pos in table.traded_cards) {
-                var cards = table.traded_cards[pos];
+			var trade_map
+			for (var k = 1; k <= 6; ++k){
+				for (var pos in table.traded_cards) {
+					var cards = table.traded_cards[pos];
 
-                var player_name = table.positions[pos];
-                var player = table.players[player_name];
-                player.removeCards(cards);
+					var player_name = table.positions[pos];
+					var player = table.players[player_name];
+					player.removeCards(cards);
 
 
-				for (var k = 1; k <= 6; ++k){
-					var trade_map = table.tradeMap();
+				
 					switch (k) {
 					case 1 || 6:
-						//left
+						//right
 						trade_map = {
 							"N": "W",
 								"S": "E",
@@ -248,7 +249,7 @@ primus.on("connection", function(client) {
 								"W": "S"
 								};
 					case 2 || 5:
-						//right
+						//across
 						trade_map = {
 							"N": "S",
 								"S": "N",
@@ -256,7 +257,7 @@ primus.on("connection", function(client) {
 								"W": "E"
 								};
 					case 3 || 4:
-						//across
+						//left
 						trade_map = {
 							"N": "E",
 								"S": "W",
