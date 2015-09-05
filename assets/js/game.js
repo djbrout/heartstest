@@ -722,9 +722,9 @@ $(document).ready(function() {
             $card.addClass("callcard");
         }
 
-        _.each($(".playing-cards .callcard"), function(card, i) {
+        _.each($(".playing-cards .callcard .card.move"), function(card, i) {
             _.delay(function() {
-                $(card).removeClass("callcard");
+                $(card).removeClass("move");
             }, i * 100);
         });
 
