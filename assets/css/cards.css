@@ -34,13 +34,16 @@
     height: 400px;
     transform: translateX(9em) translateY(9em) rotate(0deg);
 }
-
+.playing-cards .callcard .card {
+    margin-right: 0em;
+    margin-left: 0em;
+}
 /*
  * Played are the middle cards
  */
 .playing-cards .played {
     font-size: .5em;
-    cursor: default;
+    cursor: pointer;
     width: 100px;
     height: 100px;
     position: relative;
@@ -57,30 +60,33 @@
     -webkit-transition: -webkit-transform 0.1s;
     transition: transform 0.1s;
 }
-.playing-cards .table .card.hover {
-    -webkit-transform: translateY(-0.5em);    
-    transform: translateY(-0.5em) scale(2.5,2.5);
-    z-index: 9999;
-}
 
 
 
 .playing-cards .played .card.left {
+    margin-right: 0em;
+    margin-left: 0em;
     /*position: absolute;
     transform: translateX(0.0em); translateY(1.65em) rotate(0deg);
     -webkit-transform: translateX(0.0em);/* translateY(1.65em) rotate(0deg);*/
 }
 .playing-cards .played .card.top {
+    margin-right: 0em;
+    margin-left: 0em;
     /*position: absolute;
     transform: translateX(2.5em);
     -webkit-transform: translateX(2.5em);*/
 }
 .playing-cards .played .card.bottom {
+    margin-right: 0em;
+    margin-left: 0em;
     /*position: absolute;
     transform: translateX(5em);/* translateY(3.65em) rotate(0deg);
     -webkit-transform: translateX(5em);/* translateY(3.65em) rotate(0deg);*/
 }
 .playing-cards .played .card.right {
+    margin-right: 0em;
+    margin-left: 0em;
     /*position: absolute;
     transform: translateX(7.5em);/* translateY(1.65em) rotate(0deg);
     -webkit-transform: translateX(7.5em);/* translateY(1.65em) rotate(0deg);*/
