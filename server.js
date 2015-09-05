@@ -230,7 +230,7 @@ primus.on("connection", function(client) {
 		console.log("Hi");
         if (table.readyToTrade()) {
 			var trade_map;
-			console.log("Hello AJ");
+			throw "Error2";
 			for (var k = 1; k <= 6; ++k){
 				for (var pos in table.traded_cards) {
 					var cards = table.traded_cards[pos];
