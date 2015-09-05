@@ -720,7 +720,6 @@ $(document).ready(function() {
             $("#played-cards .card").removeClass("callcard")
             $("#played-cards").append($card);
             $card.addClass("callcard");
-            $card.addClass("hover");
 
         }
 
