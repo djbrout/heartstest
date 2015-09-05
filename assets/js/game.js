@@ -423,7 +423,7 @@ $(document).ready(function() {
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
             if (your_pos == pos) {
-                name_div.append('<div class = "score-label"> Pick Up Card </div>');
+                name_div.append('<div class="button"> Pick Up Card </div>');
             }
 
             if (your_pos == pos) {
