@@ -423,12 +423,12 @@ $(document).ready(function() {
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
 
-            name_div.append('<div class = "score-label"></div>');
+            //name_div.append('<div class = "score-label"></div>');
             _players[name] = {
                 dir: rel_dir,
                 pos: pos,
                 id: player.id,
-                score_div: name_div.find(".score-label"),
+                //score_div: name_div.find(".score-label"),
                 color: color_map[pos]
             };
 
