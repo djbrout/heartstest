@@ -57,7 +57,7 @@
     -webkit-transition: -webkit-transform 0.1s;
     transition: transform 0.1s;
 }
-.playing-cards .played.hover {
+.playing-cards .table .card.hover {
     -webkit-transform: translateY(-0.5em);    
     transform: translateY(-0.5em) scale(2.5,2.5);
     z-index: 9999;
