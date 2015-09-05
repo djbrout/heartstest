@@ -235,11 +235,40 @@ primus.on("connection", function(client) {
                 var player = table.players[player_name];
                 player.removeCards(cards);
 
-                var trade_map = table.tradeMap();
-                var trade_player_pos = trade_map[pos];
-                var trade_player_name = table.positions[trade_player_pos];
-                var trade_player = table.players[trade_player_name];
-                trade_player.addCards(cards);
+
+				for (var k = 1; k <= 6; ++k){
+					var trade_map = table.tradeMap();
+					switch (k) {
+					case 1 || 6:
+						//left
+						trade_map = {
+							"N": "W",
+								"S": "E",
+								"E": "N",
+								"W": "S"
+								};
+					case 2 || 5:
+						//right
+						trade_map = {
+							"N": "S",
+								"S": "N",
+								"E": "W",
+								"W": "E"
+								};
+					case 3 || 4:
+						//across
+						trade_map = {
+							"N": "E",
+								"S": "W",
+								"E": "S",
+								"W": "N"
+								};
+					}
+					var trade_player_pos = trade_map[pos];
+					var trade_player_name = table.positions[trade_player_pos];
+					var trade_player = table.players[trade_player_name];
+					trade_player.addCards(cards);
+				}
             }
         }
         //The trade is done, now figure out who goes first
