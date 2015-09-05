@@ -329,7 +329,7 @@ primus.on("connection", function(client) {
             //Only respond to this event from one person
             if (table !== undefined && table.turn == player.name) {
                 //All the cards have been played. Select a winner
-                if (_und.size(table.played_cards) == 4) {
+                if (_und.size(table.played_cards) == 8) {
                     var winner = table.getWinner();
                     var score = table.getPointsInTrick();
 
