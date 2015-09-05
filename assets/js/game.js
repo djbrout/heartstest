@@ -713,10 +713,13 @@ $(document).ready(function() {
                 removeFromHand($hand_card);
 
                 $card.addClass("bottom");
+
             } else {
                 $card.addClass(opponent.dir);
             }
+            $("#played-cards .card").removeClass("callable")
             $("#played-cards").append($card);
+            $card.addClass("callable");
         }
 
         //Hovering over the cards should pop them up

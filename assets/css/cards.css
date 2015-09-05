@@ -123,6 +123,14 @@
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+
+.playing-cards .card .callable {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    transform: translateX(9em) translateY(9em) rotate(0deg);
+}
+
 .playing-cards .card.hide{
      visibility: hidden;
 }
