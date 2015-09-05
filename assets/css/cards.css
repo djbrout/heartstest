@@ -121,7 +121,12 @@
     -webkit-transform: translateZ(1px);
     transform: translateZ(1px);
 }
-.playing-cards .played.hover .card.hover {
+.playing-cards .played .card.hover {
+    -webkit-transform: translateY(-0.5em);    
+    transform: translateY(-0.5em) scale(3,3);
+    z-index: 9999;
+}
+.playing-cards .card.hover {
     -webkit-transform: translateY(-0.5em);    
     transform: translateY(-0.5em) scale(3,3);
     z-index: 9999;
