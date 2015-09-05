@@ -422,11 +422,11 @@ $(document).ready(function() {
             name_div.text(name);
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
-            if (pos == 'N') {
+            if (your_pos == pos) {
                 name_div.append('<div class = "score-label"> Pick Up Card </div>');
             }
 
-            if (pos == 'N') {
+            if (your_pos == pos) {
                 _players[name] = {
                     dir: rel_dir,
                     pos: pos,
