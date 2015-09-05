@@ -24,8 +24,8 @@
     text-align: center;
 }
 .playing-cards .table .card {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 0em;
+    margin-left: 0em;
 }
 /*
  * Played are the middle cards
@@ -35,9 +35,10 @@
     cursor: default;
     width: 100px;
     height: 100px;
-    position: absolute;
-    left: 50%;
-    margin-left: -132.5px;
+    position: relative;
+    /*left: 50%;*/
+    /*margin-left: -132.5px;*/
+    display: inline-block;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-delay: 0.5s;
     -webkit-animation-timing-function: ease-in-out;
