@@ -522,7 +522,7 @@ $(document).ready(function() {
         $("#played-cards .card").hover(
             function() {
                 //In handler
-                if (!$(this).hasClass("disabled") && !$(this).hasClass("flipped") && !IS_IPAD) {
+                if (!$(this).hasClass("flipped") && !IS_IPAD) {
                     $("#played-cards .card").removeClass("hover");
                     $(this).addClass("hover");
                 }
