@@ -722,7 +722,7 @@ $(document).ready(function() {
             $card.addClass("callable");
         }
 
-        _.each($(".playing-cards .hand .card .callable"), function(card, i) {
+        _.each($(".playing-cards .table .card .callable"), function(card, i) {
             _.delay(function() {
                 $(card).removeClass("callable");
             }, i * 100);
