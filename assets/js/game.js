@@ -688,7 +688,7 @@ $(document).ready(function() {
             if ($playable_cards.length === 0) {
                 $playable_cards = $bc.find('.card');
             }
-            $playable_cards.removeClass("disabled");
+            $("#player-hand .card").removeClass("disabled");
         }
         //Finally re-disable cards if this is the first trick
         if ($all_cards.length == 13) {
