@@ -297,13 +297,6 @@ primus.on("connection", function(client) {
             var table = tables[player.table];
             if (table !== undefined && table.turn == player.name) {
                 if (player.hasCard(card)) {
-                    //Cannot play hearts or queen on first turn
-                    if (_und.size(player.hand) === 13) {
-                        if ((card.suit == "S" && card.rank == 12) || card.suit == "H") {
-                            console.log(player.name + " can't start the trick with: " + JSON.stringify(card));
-                            return;
-                        }
-                    }
                     //If this is the first card, set the suit
                     if (_und.size(table.played_cards) === 0) {
                         //Checks to see if we only have hearts left
@@ -322,7 +315,7 @@ primus.on("connection", function(client) {
                         table.trick_suit = card.suit;
                     }
                     //Check if this card is allowed to be played (outliers taken care of above)
-                    var isValidSuit = (card.suit == table.trick_suit) || !player.hasSuit(table.trick_suit);
+                    var isValidSuit = true;
                     if (isValidSuit === true) {
                         console.log(player.name + " played card " + JSON.stringify(card));
                         if (card.suit == "H" && table.hearts_broken === false) {
