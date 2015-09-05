@@ -718,10 +718,9 @@ $(document).ready(function() {
                 $card.addClass(opponent.dir);
             }
             $("#played-cards .card").removeClass("callcard")
-            $("#played-cards .card").addClass("hover")
             $("#played-cards").append($card);
             $card.addClass("callcard");
-            $card.removeClass("hover");
+            $card.addClass("hover");
 
         }
 
