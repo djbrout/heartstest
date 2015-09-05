@@ -722,11 +722,12 @@ $(document).ready(function() {
             $card.addClass("callcard");
         }
 
-        _.each($(".playing-cards .callcard .card.move"), function(card, i) {
-            _.delay(function() {
-                $(card).removeClass("move");
-            }, i * 100);
-        });
+        
+        // _.each($(".playing-cards .callcard .card.move"), function(card, i) {
+        //     _.delay(function() {
+        //         $(card).removeClass("move");
+        //     }, i * 100);
+        // });
 
         //Hovering over the cards should pop them up
         $("#played-cards .card").hover(

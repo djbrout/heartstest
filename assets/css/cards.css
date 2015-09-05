@@ -114,12 +114,7 @@
     transform: rotateY(180deg);
 }
 
-.playing-cards .callcard .card {
-    margin-right: 0em;
-    margin-left: 0em;
-}
-
-.playing-cards .callcard .card.move {
+.playing-cards .callcard {
     position: absolute;
     width: 120px;
     height: 160px;
