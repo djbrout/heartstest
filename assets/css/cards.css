@@ -150,7 +150,7 @@
     height: 160px;
     right: 180px;
     top: 10px;
-    transform: translateX(2em) translateY(2em) rotate(0deg);
+    transform: translateX(-10em) translateY(-10em) rotate(0deg);
 }
 .playing-cards .card .back {
     background: -webkit-radial-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../images/norwegian_rose_@2X.png");
