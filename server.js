@@ -297,7 +297,7 @@ primus.on("connection", function(client) {
                             table.hearts_broken = true;
                             primus.room(table.id).send("heartsBroken");
                         }
-                        if (_und.size(table.played_cards) < 4) {
+                        if (_und.size(table.played_cards) < 8) {
                             primus.room(table.id).send("cardPlayed", player.name, card,
                                 table.trick_suit);
                             //Add the card to the list of played cards
