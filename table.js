@@ -119,36 +119,36 @@ var Table = function() {
         };
     }
 
+// MAKE INTO CHARLESTON
+
     function tradeMap() {
-        switch (this.round % 4) {
-            case 1:
+        switch (this.round) {
+            case 1 || 6:
                 //left
-                return {
-                    "N": "E",
-                    "S": "W",
-                    "E": "S",
-                    "W": "N"
-                };
-            case 2:
-                //right
                 return {
                     "N": "W",
                     "S": "E",
                     "E": "N",
                     "W": "S"
                 };
-            case 3:
-                //across
+            case 2 || 5:
+                //right
                 return {
                     "N": "S",
                     "S": "N",
                     "E": "W",
                     "W": "E"
                 };
-            case 0:
-                //error
-                return null;
+            case 3 || 4:
+                //across
+                return {
+                    "N": "E",
+                    "S": "W",
+                    "E": "S",
+                    "W": "N"
+                };
         }
+        return null;
     }
 
     function tradeDir() {

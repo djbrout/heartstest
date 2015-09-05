@@ -105,7 +105,7 @@
 }
 .playing-cards .card.hover {
     -webkit-transform: translateY(-0.5em);    
-    transform: translateY(-0.5em) scale(2,2);
+    transform: translateY(-0.5em) scale(3,3);
     z-index: 9999;
 }
 .playing-cards .card .back {
