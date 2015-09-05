@@ -227,7 +227,7 @@ primus.on("connection", function(client) {
 
 
     function startPlaying(table) {
-        setInfoText("REACHED HERE", color_grey);
+        //setInfoText("REACHED HERE", color_grey);
         if (table.readyToTrade()) {
 			var trade_map;
 			for (var k = 1; k <= 6; ++k){
