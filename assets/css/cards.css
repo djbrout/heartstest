@@ -146,10 +146,10 @@
     transform: translateY(-0.5em) scale(2.2,2.2);
     z-index: 9999;*/
     position: absolute;
-    width: 150px;
-    height: 170px;
-    right: 250px;
-    top: 50px;
+    width: 120px;
+    height: 160px;
+    right: 180px;
+    top: 10px;
     transform: translateX(2em) translateY(2em) rotate(0deg);
 }
 .playing-cards .card .back {
