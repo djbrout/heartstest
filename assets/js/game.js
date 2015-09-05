@@ -519,17 +519,17 @@ $(document).ready(function() {
         );
 
         //Hovering over the cards should pop them up
-        $(".playing_cards .card").hover(
+        $("#played-cards .card").hover(
             function() {
                 //In handler
                 if (!$(this).hasClass("disabled") && !$(this).hasClass("flipped") && !IS_IPAD) {
-                    $(".playing_cards .card").removeClass("hover");
+                    $("#played-cards .card").removeClass("hover");
                     $(this).addClass("hover");
                 }
             },
             function() {
                 //Out handler
-                $(".playing_cards .card").removeClass("hover");
+                $("#played-cards .card").removeClass("hover");
             }
         );
 
