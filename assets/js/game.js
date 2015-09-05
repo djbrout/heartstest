@@ -507,7 +507,7 @@ $(document).ready(function() {
         $("#player-hand .card").hover(
             function() {
                 //In handler
-                if (!$(this).hasClass("disabled") && !$(this).hasClass("flipped") && !IS_IPAD) {
+                if (!$(this).hasClass("flipped") && !IS_IPAD) {
                     $("#player-hand .card").removeClass("hover");
                     $(this).addClass("hover");
                 }
@@ -518,20 +518,7 @@ $(document).ready(function() {
             }
         );
 
-        //Hovering over the cards should pop them up
-        $("#played-cards .card").hover(
-            function() {
-                //In handler
-                if (!$(this).hasClass("flipped") && !IS_IPAD) {
-                    $("#played-cards .card").removeClass("hover");
-                    $(this).addClass("hover");
-                }
-            },
-            function() {
-                //Out handler
-                $("#played-cards .card").removeClass("hover");
-            }
-        );
+
 
         $("#player-hand .card").click(function() {
             if (_state == "trading") {
@@ -730,6 +717,21 @@ $(document).ready(function() {
             }
             $("#played-cards").append($card);
         }
+
+        //Hovering over the cards should pop them up
+        $("#played-cards .card").hover(
+            function() {
+                //In handler
+                if (!$(this).hasClass("flipped") && !IS_IPAD) {
+                    $("#played-cards .card").removeClass("hover");
+                    $(this).addClass("hover");
+                }
+            },
+            function() {
+                //Out handler
+                $("#played-cards .card").removeClass("hover");
+            }
+        );
     }
 
     socket.on("heartsBroken", function() {
@@ -850,6 +852,7 @@ $(document).ready(function() {
         });
     }
 
+    
     function getSuit($card) {
         for (var suit in inv_suit_map) {
             if ($card.hasClass(suit)) {
