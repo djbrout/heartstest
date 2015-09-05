@@ -49,18 +49,18 @@
 }
 .playing-cards .played .card.top {
     position: absolute;
-    transform: translateX(1.65em);
-    -webkit-transform: translateX(1.65em);
+    transform: translateX(2.65em);
+    -webkit-transform: translateX(2.65em);
 }
 .playing-cards .played .card.bottom {
     position: absolute;
-    transform: translateX(2.65em);/* translateY(3.65em) rotate(0deg);*/
-    -webkit-transform: translateX(2.65em);/* translateY(3.65em) rotate(0deg);*/
+    transform: translateX(4.65em);/* translateY(3.65em) rotate(0deg);*/
+    -webkit-transform: translateX(4.65em);/* translateY(3.65em) rotate(0deg);*/
 }
 .playing-cards .played .card.right {
     position: absolute;
-    transform: translateX(3.65em);/* translateY(1.65em) rotate(0deg);*/
-    -webkit-transform: translateX(3.65em);/* translateY(1.65em) rotate(0deg);*/
+    transform: translateX(6.65em);/* translateY(1.65em) rotate(0deg);*/
+    -webkit-transform: translateX(6.65em);/* translateY(1.65em) rotate(0deg);*/
 }
 /**
  * Card shape and animations
