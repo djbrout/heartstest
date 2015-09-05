@@ -133,7 +133,7 @@
     transform: translateZ(1px);
 }
 
-.playing-cards .card.hover {
+.card.hover {
     -webkit-transform: translateY(-0.5em);    
     transform: translateY(-0.5em) scale(2.2,2.2);
     z-index: 9999;
