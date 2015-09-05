@@ -297,7 +297,7 @@ primus.on("connection", function(client) {
                             table.hearts_broken = true;
                             primus.room(table.id).send("heartsBroken");
                         }
-                        if (_und.size(table.played_cards) < 8) {
+                        if (_und.size(table.played_cards) < 4) {
                             primus.room(table.id).send("cardPlayed", player.name, card,
                                 table.trick_suit);
                             //Add the card to the list of played cards
@@ -305,7 +305,7 @@ primus.on("connection", function(client) {
                             player.removeCards([card]);
                         }
                         //If this is the last card, tell the clients to clear the trick
-                        if (_und.size(table.played_cards) == 8) {
+                        if (_und.size(table.played_cards) == 4) {
                             var winner = table.getWinner();
                             primus.room(table.id).send("clearTrick", winner);
                         } else {
@@ -329,7 +329,7 @@ primus.on("connection", function(client) {
             //Only respond to this event from one person
             if (table !== undefined && table.turn == player.name) {
                 //All the cards have been played. Select a winner
-                if (_und.size(table.played_cards) == 8) {
+                if (_und.size(table.played_cards) == 4) {
                     var winner = table.getWinner();
                     var score = table.getPointsInTrick();
 
