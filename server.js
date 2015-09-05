@@ -244,7 +244,7 @@ primus.on("connection", function(client) {
         }
         //The trade is done, now figure out who goes first
         _und.each(_und.values(table.players), function(player) {
-            if (player.hasTwoOfClubs()) {
+            if (player.isDealer()) {
                 table.turn = player.name;
             }
         });
