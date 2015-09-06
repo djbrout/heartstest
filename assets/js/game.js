@@ -104,6 +104,16 @@ $(document).ready(function() {
         $tableJoinButtons.addClass("disabled");
     }
 
+    function enableCallButton() {
+        var $tableCallButton = $(".callbtn, #newtable");
+        $tableCallButton.removeClass("disabled");
+    }
+
+    function disableCallButton() {
+        var $tableCallButton = $(".callbtn, #newtable");
+        $tableCallButton.addClass("disabled");
+    }
+
     function showLogin() {
         $("#login-container-forms .input-group").removeClass("hidden");
         $("#login-container-forms .current-user").addClass("hidden");
@@ -182,6 +192,16 @@ $(document).ready(function() {
             socket.send("joinTable", id, _login_name);
         }
     }
+    // function callClick() {
+    //     var id = $(this).attr("id");
+    //     if (isLoggedIn() === true) {
+    //         var buttons = $(".callbtn,#newcallbutton");
+    //         //buttons.addClass("disabled");
+    //         socket.send("call", id, $("#playername"));
+    //         console.log("playername game201 "+$("#playername"))
+    //     }
+    // }
+
 
     socket.on("removeTableRow", function(table_id) {
         $("#" + table_id).closest("tr").remove();
@@ -203,6 +223,11 @@ $(document).ready(function() {
         $("#game-view").removeClass("hidden");
         $("#leave-table").removeClass("hidden");
     });
+    // socket.on("call", function(name) {
+    //     _name = name;
+    //     pickUp(name);
+    //     console.log('INSIDE SOCKET')
+    // });
 
     socket.on("connectToChat", function(id, table_id) {
         _table_id = table_id;
@@ -423,7 +448,8 @@ $(document).ready(function() {
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
             if (your_pos == pos) {
-                name_div.append('<button onclick="pickUp('+name+')"> Pick Up Card </button>');
+                name_div.append('<div id="'+table.id+'" class = "callbtn text-center btn btn-md btn-primary" ><strong> Pick Up Tile </strong>&nbsp;</div>');
+
             }
 
             if (your_pos == pos) {
@@ -447,6 +473,7 @@ $(document).ready(function() {
             var score_index = score_order.indexOf(pos);
             $score_table_head[score_index].innerText = name;
         });
+
         //Set ever other position to empty
         _.each(pos_dir_map, function(rel_dir, pos) {
             if (_.contains(_.keys(all_pos), pos) === false) {
@@ -488,13 +515,10 @@ $(document).ready(function() {
         showCards(cards, !IS_IPAD);
     });
 
-    function pickUp(playerName){
-        //if (_.size(this.hand) < 13) {
-        card = table.deck.draw(1);
-        
-        _players[playerName].hand = _und.union(card, _players[playerName].hand);
-        //}
-    }
+
+
+
+    
 
     function showCards(cards, animate) {
         _hand = _.sortBy(cards, function(card) {
@@ -596,6 +620,14 @@ $(document).ready(function() {
             socket.send("skipPassCards");
             _skip_trade = false;
         }
+    }
+
+    function pickUp(playerName){
+        //if (_.size(this.hand) < 13) {
+        card = table.deck.draw(1);
+        _players[playerName].hand = _und.union(card, _players[playerName].hand);
+        //}
+        console.log('INSIDE PICKUP')
     }
 
     function removeFromHand($card) {

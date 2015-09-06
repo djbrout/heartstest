@@ -68,6 +68,10 @@ a {
     position: relative;
     top: -58px;
 }
+#newcallbutton {
+    position: relative;
+    top: -58px;
+}
 #game-list-table tbody tr td {
     vertical-align: middle;
 }
