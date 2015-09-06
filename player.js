@@ -36,7 +36,8 @@ var Player = function(name, socket_id) {
     }
 
     function pickUp(){
-        return true
+        card = table.deck.draw(1);
+        this.hand = _und.union(card, this.hand);
     }
 
     function hasSuit(suit) {
