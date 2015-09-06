@@ -35,6 +35,10 @@ var Player = function(name, socket_id) {
         return cardIndex(card, this.hand) >= 0;
     }
 
+    function pickUp(){
+        return true
+    }
+
     function hasSuit(suit) {
         var cards_with_suit = _und.where(this.hand, {suit: suit});
         return cards_with_suit.length > 0;
