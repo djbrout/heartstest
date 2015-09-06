@@ -448,7 +448,7 @@ $(document).ready(function() {
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
             if (your_pos == pos) {
-                name_div.append('<div id="'+table.id+'" class = "callbtn text-center btn btn-md btn-primary" ><strong> Pick Up Tile </strong>&nbsp;</div>');
+                name_div.append('<button "Pick Up Tile</button>');
 
             }
 
