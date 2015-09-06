@@ -431,7 +431,7 @@ $(document).ready(function() {
                     dir: rel_dir,
                     pos: pos,
                     id: player.id,
-                    score_div: name_div.find(".score-label"),
+                    score_div: name_div.find(".button"),
                     color: color_map[pos]
                 };
             } 
