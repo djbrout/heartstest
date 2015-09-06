@@ -28,16 +28,6 @@
     margin-left: 0em;
 }
 
-.playing-cards .callcard {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    transform: translateX(9em) translateY(9em) rotate(0deg);
-}
-.playing-cards .callcard .card {
-    margin-right: 0em;
-    margin-left: 0em;
-}
 /*
  * Played are the middle cards
  */
@@ -124,12 +114,12 @@
     transform: rotateY(180deg);
 }
 
-.playing-cards .card .callable {
+.playing-cards .callcard {
     position: absolute;
-    width: 120px;
-    height: 160px;
-    right: 180px;
-    top: 10px;
+    width: 110px;
+    height: 150px;
+    right: 150px;
+    top: -155px;
 }
 
 .playing-cards .card.hide{
