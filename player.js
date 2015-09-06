@@ -35,12 +35,6 @@ var Player = function(name, socket_id) {
         return cardIndex(card, this.hand) >= 0;
     }
 
-    function pickUp(){
-        //if (_.size(this.hand) < 13) {
-        card = table.deck.draw(1);
-        this.hand = _und.union(card, this.hand);
-        //}
-    }
 
     function hasSuit(suit) {
         var cards_with_suit = _und.where(this.hand, {suit: suit});

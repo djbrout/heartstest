@@ -423,7 +423,7 @@ $(document).ready(function() {
             name_div.addClass(color_map[pos]);
             name_div.removeClass(color_grey);
             if (your_pos == pos) {
-                name_div.append('<button onclick="player.pickUp()"> Pick Up Card </button>');
+                name_div.append('<button onclick="pickUp('+name+')"> Pick Up Card </button>');
             }
 
             if (your_pos == pos) {
@@ -487,6 +487,14 @@ $(document).ready(function() {
     socket.on("showCards", function(cards) {
         showCards(cards, !IS_IPAD);
     });
+
+    function pickUp(playerName){
+        //if (_.size(this.hand) < 13) {
+        card = table.deck.draw(1);
+        
+        _players[playerName].hand = _und.union(card, _players[playerName].hand);
+        //}
+    }
 
     function showCards(cards, animate) {
         _hand = _.sortBy(cards, function(card) {
