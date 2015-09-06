@@ -216,7 +216,7 @@ primus.on("connection", function(client) {
             if (table.readyToTrade()) {
                 // All 4 players have selected 3 cards
                 doTrades(table);
-                if (table.trade_iteration < 6) {
+                if (table.trade_iteration < 1){//6) {
                     // Update the remaining trades counter
                     var trade_values = _und.values(table.traded_cards);
                     var remaining_trades = 6 - table.trade_iteration; //4 - _und.compact(trade_values).length;
