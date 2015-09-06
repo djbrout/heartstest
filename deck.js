@@ -8,11 +8,19 @@ var Deck = function() {
      *         ex: "11H" is the Jack of hearts
      **/
     var suits = ["H", "C", "S", "D"];
-    var n = 52;
+    var n = 104;
     var cards = [];
 
     var index = n / suits.length;
     var count = 0;
+    for (var i = 0; i <= 3; ++i) {
+        for (var j = 1; j <= index; ++j) {
+            cards[count++] = {
+                suit: suits[i],
+                rank: j
+            };
+        }
+    }
     for (var i = 0; i <= 3; ++i) {
         for (var j = 1; j <= index; ++j) {
             cards[count++] = {
